@@ -50,6 +50,31 @@ a {
   line-height: 1.67; /* 166.667% */
   margin-top: 18px;
 }
+.control {
+  display: flex;
+  column-gap: 18px;
+  align-items: center;
+}
+.control__btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #575f66;
+  background: #fff;
+  cursor: pointer;
+  transition: 0.25s;
+}
+.control__btn:hover {
+  background: #2e80ce;
+  border-color: #2e80ce;
+  color: #fff;
+}
+.control-icon--next {
+  rotate: 180deg; /*xoay chieu mui ten*/
+}
 /* ================ header=============== */
 header {
   padding-top: 30px;
@@ -280,7 +305,8 @@ header {
 /* =============== about=============== */
 .about {
   background: #fff;
-  padding: 170px 0;
+  padding: 85px 0 206px; /*ở dưới 85 cộng 121px vì absolute hình nhỏ tràn ra ngoài*/
+  margin-top: 85px;
 }
 .about__row {
   position: relative;
@@ -288,10 +314,17 @@ header {
   align-items: center;
   justify-content: space-between;
 }
+.about__media {
+  width: 49%;
+}
+.about__content {
+  width: 40%;
+}
 .about__img {
   border-radius: 6px;
 }
 .about__img--large {
+  display: flex; /*vì img là thẻ inline nên df để loại bỏ phần thừa ở dưới */
   width: 512px;
   height: 370px;
   object-fit: cover;
@@ -312,4 +345,54 @@ header {
 }
 .about__btn {
   margin-top: 38px;
+}
+/* =============== team=============== */
+.team {
+  padding: 85px 0;
+}
+.team-header {
+  text-align: center;
+  margin: 0 auto;
+}
+.team__cta {
+  margin-top: 38px;
+}
+.team__list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin-top: 70px;
+  column-gap: 30px;
+}
+.team-item__thumb {
+  height: 290px;
+  max-width: 100%;
+  object-fit: cover;
+  display: block;
+  transition: 0.5s;
+}
+.team-item__img-bg {
+  background: #eaf6ff;
+  border-radius: 6px;
+  padding-top: 28px;
+  overflow: hidden;
+}
+.team-item:hover .team-item__thumb {
+  transform: scale(1.05);
+}
+.team-item__name {
+  margin-top: 12px;
+  color: #10375c;
+  text-align: center;
+  font-size: 1.6rem;
+  line-height: 1.75; /* 175% */
+}
+.team-item__desc {
+  color: #575f66;
+  text-align: center;
+  font-size: 1.4rem;
+  line-height: 1.86; /* 185.714% */
+}
+.team__control {
+  margin-top: 38px;
+  justify-content: center;
 }
