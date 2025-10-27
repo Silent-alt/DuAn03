@@ -32,6 +32,12 @@
   <link rel="stylesheet" href="./assets/css/reset.css" />
   <!-- style -->
   <link rel="stylesheet" href="./assets/css/style.css" />
+  <!-- animation -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <!-- animate.css -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <!-- responsive -->
+  <link rel="stylesheet" href="./assets/css/responsive.css">
   <title>Shine Smile</title>
 </head>
 
@@ -41,7 +47,7 @@
     <div class="container">
       <div class="header-top header--fixed">
         <!-- logo -->
-        <a href="./"><img src="./assets/img/Logo.svg" alt="" class="logo" /></a>
+        <a href="./"><img src="./assets/img/Logo.svg" alt="" class="logo header__logo" /></a>
         <!-- nav -->
         <nav class="navbar">
           <ul class="navbar__list">
@@ -69,33 +75,50 @@
       <section class="hero">
         <!-- hero left -->
         <div class="hero__content">
-          <h1 class="hero__heading">Exceptional dental care for all ages.</h1>
-          <p class="hero__desc">
+          <h1 class="hero__heading animate__animated animate__backInDown">Exceptional dental care for all ages.</h1>
+          <p class="hero__desc animate__animated animate__backInUp">
             Exceptional dental care for all ages. Your great smile begins with
             a great dentist.
           </p>
 
           <div class="hero__row">
-            <a href="#!" class="btn">Book Online</a>
-            <span class="hero__phone">or call (123) 456-7890</span>
+            <a href="#!" class="btn animate__animated animate__backInLeft animate__delay-1s">Book Online</a>
+            <span class="hero__phone animate__animated animate__backInRight">or call (123) 456-7890</span>
           </div>
         </div>
         <!-- hero right -->
         <div class="hero__media">
           <figure class="hero__images">
-            <img src="./assets/img/doctortooth1.jpg" alt="" class="hero__img hero__img--large" />
-            <img src="./assets/img/doctortooth2.jpg" alt="" class="hero__img hero__img--small" />
+            <img src="./assets/img/doctortooth1.jpg" alt="" class="hero__img hero__img--large"
+              data-aos="animate__backInLeft" />
+            <img src="./assets/img/doctortooth2.jpg" alt="" class="hero__img hero__img--small"
+              data-aos="animate__backInRight" />
           </figure>
         </div>
       </section>
     </div>
   </header>
+
+  <!-- tablet mobile header -->
+  <div class="mobile-header">
+    <!-- tablet mobile menu -->
+     <input type="checkbox" name="menu-checkbox" id="menu-checkbox" class="menu-checkbox" hidden>
+<label for="menu-checkbox">
+      <svg class="menu-header__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
+        <path fill="currentColor"
+          d="M96 160C96 142.3 110.3 128 128 128L512 128C529.7 128 544 142.3 544 160C544 177.7 529.7 192 512 192L128 192C110.3 192 96 177.7 96 160zM96 320C96 302.3 110.3 288 128 288L512 288C529.7 288 544 302.3 544 320C544 337.7 529.7 352 512 352L128 352C110.3 352 96 337.7 96 320zM544 480C544 497.7 529.7 512 512 512L128 512C110.3 512 96 497.7 96 480C96 462.3 110.3 448 128 448L512 448C529.7 448 544 462.3 544 480z" />
+      </svg>
+</label>
+<!-- overlay -->
+ <label for="menu-checkbox"class="menu-overlay"></label>
+  </div>
+
   <!-- main -->
   <main>
     <!-- our services -->
     <section class="service">
       <div class="container">
-        <h2 class="service__heading section-heading">Our services</h2>
+        <h2 class="service__heading section-heading " data-aos="animate__bounceInLeft">Our services</h2>
         <p class="service__desc section-desc">
           Exceptional dental care for all ages. Your great smile begins with a
           great dentist.
@@ -103,7 +126,8 @@
         <div class="service__row">
           <!-- service left -->
           <figure>
-            <img src="./assets/img/service_img.jpg" alt="" class="service__img" />
+            <img src="./assets/img/service_img.jpg" alt="" class="service__img" data-aos="animate__zoomIn"
+              data-aos-duration="1500" />
           </figure>
           <!-- service right -->
           <div class="service__list">
@@ -205,8 +229,10 @@
           <!-- about left -->
           <div class="about__media">
             <figure>
-              <img src="./assets/img/teeth_large.jpg" alt="" class="about__img about__img--large">
-              <img src="./assets/img/teeth_small.jpg" alt="" class="about__img about__img--small">
+              <img src="./assets/img/teeth_large.jpg" alt="" class="about__img about__img--large"
+                data-aos="animate__fadeInTopLeft">
+              <img src="./assets/img/teeth_small.jpg" alt="" class="about__img about__img--small"
+                data-aos="animate__fadeInBottomRight">
             </figure>
           </div>
           <!-- about right -->
@@ -459,12 +485,23 @@
         </div>
       </div>
       <!-- copyright -->
-       <div class="footer__copyright">
+      <div class="footer__copyright">
         <p class="footer__copyright--desc">2021 GDN. Copyright and All rights reserved.</p>
-        
-       </div>
+
+      </div>
     </div>
   </section>
+
+  <!-- js animation -->
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      // mirror: true,
+      useClassNames: true,
+      initClassName: false,
+      animatedClassName: 'animate__animated',
+    });
+  </script>
 </body>
 
 </html>

@@ -1,0 +1,54 @@
+/* pc */
+@media (min-width: 992px) {
+}
+/* tablet & mobile */
+@media (max-width: 991.98px) {
+  .navbar {
+    display: none;
+  }
+  /*  chuyen logo vao giua */
+  .header-top {
+    position: relative;
+  }
+  .header__logo {
+    position: absolute;
+    left: 50%;
+    translate: -50% -50%;
+  }
+  /* can lai vi tri menu icon */
+  .menu-header__icon {
+    position: absolute;
+    top: 38px;
+    left: 24px;
+    color: #fff;
+    width: 24px;
+  }
+  /* overlay */
+  .menu-overlay {
+    position: fixed;
+    background: rgba(0, 0, 0, 0.3);
+    inset: 0;
+    z-index: 1;
+    /* o dieu kien binh thuong an lop phu di */
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.5s;
+  }
+  /* ktra menu checkbox co duoc check hay khong */
+  .menu-checkbox:checked ~ .menu-overlay {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+/* tablet */
+@media (min-width: 768px) and (max-width: 991.98px) {
+}
+/* mobile */
+@media (max-width: 767.98px) {
+}
+/* tam an phan khong lien quan */
+.hero,
+.footer,
+.main {
+  display: none;
+}
