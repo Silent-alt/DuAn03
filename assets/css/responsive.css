@@ -1,5 +1,8 @@
 /* pc */
 @media (min-width: 992px) {
+  .mobile-header {
+    display: none;
+  }
 }
 /* tablet & mobile */
 @media (max-width: 991.98px) {
@@ -39,6 +42,108 @@
     opacity: 1;
     visibility: visible;
   }
+  /* code cho menu drawer */
+  .menu-drawer {
+    position: fixed;
+    background: #2e1919;
+    inset: 0 40% 0 0;
+    z-index: 2;
+    transform: translateX(-100%);
+    /* di chuyen menu drawer ra ngoài màn hình */
+    transition: 0.5s;
+    padding: 60px;
+  }
+  .menu-checkbox:checked ~ .menu-drawer {
+    transform: translateX(0);
+    /* khi bấm vào menu icon thì
+     menu drawer sẽ hiện lên màn hình */
+  }
+  /* menu top */
+  .close__menu {
+    width: 48px;
+    color: #fff;
+  }
+  .menu-drawer__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .navbar__list {
+    margin-top: 25px;
+    flex-direction: column;
+  }
+  #navbar__list--mobile {
+    margin-top: 25px;
+  }
+  #navbar__list--mobile a {
+    display: block;
+    width: 100%;
+    text-align: left;
+    padding: 10px 0;
+    color: #fff;
+    text-decoration: none;
+    font-size: 2rem;
+  }
+
+  .navbar__link:hover {
+    background-color: #00ffff37;
+  }
+
+  /* khoi hero */
+  .hero {
+    flex-direction: column;
+    row-gap: 50px;
+  }
+  .hero__media {
+    order: 1;
+  }
+  .hero__content {
+    order: 2;
+    width: 80%;
+    text-align: center;
+    margin: 22px auto;
+  }
+  .hero__row {
+    justify-content: center;
+  }
+  /* khoi service */
+  .service__row {
+    flex-direction: column;
+    row-gap: 20px;
+    align-items: center;
+  }
+  .service__img {
+    width: 100%; /* Full chiều ngang khung cha */
+    height: auto; /* Giữ tỉ lệ ảnh */
+    max-width: 100%; /* Không bị vượt khung */
+  }
+  .service-item {
+    width: 90%;
+    text-align: start;
+  }
+  .service__list {
+    text-align: center;
+  }
+  /* khoi about */
+  .about__row {
+    flex-direction: column;
+    row-gap: 30px;
+  }
+  .about__img--small {
+    display: none;
+  }
+  .about__media {
+    width: 100%;
+  }
+  .about__img--large {
+    width: 100%;
+    border-radius: 15px;
+    margin: 25px auto;
+  }
+  .about__content {
+    width: 90%;
+    text-align: center;
+  }
 }
 /* tablet */
 @media (min-width: 768px) and (max-width: 991.98px) {
@@ -47,7 +152,7 @@
 @media (max-width: 767.98px) {
 }
 /* tam an phan khong lien quan */
-.hero,
+
 .footer,
 .main {
   display: none;

@@ -343,12 +343,12 @@ header {
   height: 370px;
   object-fit: cover;
 }
-.about__heading {
+/* .about__heading {
   width: 470px;
-}
-.about__desc {
+} */
+/* .about__desc {
   width: 468px;
-}
+} */
 .about__btn {
   margin-top: 38px;
 }
