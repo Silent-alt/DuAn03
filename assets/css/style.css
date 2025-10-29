@@ -453,9 +453,9 @@ header {
   justify-content: space-between;
 }
 
-.dental__heading {
+/* .dental__heading {
   max-width: 470px;
-}
+} */
 .dental__read {
   display: inline-block;
   margin: 28px 0;
