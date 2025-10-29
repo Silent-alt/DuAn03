@@ -144,6 +144,22 @@
     width: 90%;
     text-align: center;
   }
+  /* khoi team list*/
+  .team__list {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+  .team-item__thumb {
+    margin: 0 auto;
+  }
+  /* khoi install */
+  .install__img {
+    display: none;
+  }
+  .install__content {
+    width: 100%;
+    margin: 0 auto;
+  }
 }
 /* tablet */
 @media (min-width: 768px) and (max-width: 991.98px) {
