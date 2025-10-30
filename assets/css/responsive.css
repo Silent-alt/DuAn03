@@ -21,10 +21,10 @@
   /* can lai vi tri menu icon */
   .menu-header__icon {
     position: absolute;
-    top: 38px;
+    top: 32px;
     left: 24px;
     color: #fff;
-    width: 24px;
+    width: 40px;
   }
   /* overlay */
   .menu-overlay {
@@ -75,13 +75,13 @@
   #navbar__list--mobile {
     margin-top: 25px;
   }
+  .navbar__item a,
   #navbar__list--mobile a {
     display: block;
     width: 100%;
     text-align: left;
     padding: 10px 0;
     color: #fff;
-    text-decoration: none;
     font-size: 2rem;
   }
 
@@ -160,6 +160,9 @@
     width: 100%;
     margin: 0 auto;
   }
+  .install__heading {
+    margin: 0;
+  }
   /* khoi dental */
   .dental__care {
     flex-direction: column-reverse;
@@ -173,13 +176,121 @@
     text-align: center;
   }
   .section-heading {
-    max-width: 90%;
+    max-width: 100%;
     margin: 0 auto;
   }
 }
 /* tablet */
 @media (min-width: 768px) and (max-width: 991.98px) {
+  .show-on-mobile {
+    display: none;
+  }
 }
 /* mobile */
 @media (max-width: 767.98px) {
+  .header__action {
+    display: none;
+  }
+  .menu-header__icon {
+    top: 10px;
+  }
+  .menu-drawer {
+    padding: 40px;
+    inset: 0 20% 0 0;
+  }
+  .navbar__item {
+    list-style-type: none;
+  }
+  .separate {
+    border-top: 1.5px solid #8c8b8b;
+  }
+  .hero__img--small {
+    display: none;
+  }
+  .hero__img--large {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+  }
+  .hero__heading {
+    font-size: 3rem;
+  }
+  .hero__desc {
+    font-size: 1.4rem;
+  }
+  .hero__row {
+    flex-direction: column;
+    row-gap: 20px;
+  }
+  .hero__phone {
+    margin-left: 0;
+  }
+  /* khoi service */
+  .service {
+    padding: 70px 0;
+  }
+  .section-desc {
+    width: 84%;
+  }
+  .service__img {
+    height: 470px;
+  }
+  /* work */
+  .work__desc {
+    width: 100%;
+  }
+  .work-list {
+    grid-template-columns: 1fr;
+  }
+  .work-item {
+    padding: 20px;
+  }
+  /* about */
+  .about {
+    padding: 40px 0;
+    margin-top: 20px;
+  }
+  .section-heading {
+    font-size: 3rem;
+  }
+  .section-desc {
+    margin: 0 auto;
+    width: 100%;
+  }
+  /* team */
+  .team__list {
+    grid-template-columns: 1fr;
+  }
+  /* install */
+  .install__inner {
+    padding: 40px 0;
+  }
+
+  .install__row {
+    justify-content: center;
+  }
+  .install__desc {
+    padding: 0 17px;
+    font-size: 1.5rem;
+  }
+  /* dental */
+  .dental__list {
+    grid-template-columns: 1fr;
+    row-gap: 30px;
+  }
+  /* appoint */
+  .appointment__inner {
+    padding: 30px 5px;
+  }
+  /* footer */
+  .footer {
+    padding-top: 40px;
+  }
+  .footer__top {
+    grid-template-columns: 1fr;
+    row-gap: 20px;
+  }
+  .footer__copyright--desc {
+    margin-top: 20px;
+  }
 }
